@@ -1,0 +1,507 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --primary-dark: #388E3C;
+    --primary-light: #A5D6A7;
+    --secondary-color: #8BC34A;
+    --background-color: #f0f9f0;
+    --card-color: rgba(255, 255, 255, 0.7);
+    --text-color: #333333;
+    --border-radius: 16px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    background-image: url('images/background.jpg.jpg');
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #f0f9f0;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 容器样式 */
+.container {
+    background-color: var(--card-color);
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+/* 主要内容区域 */
+main {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 设置区域样式 */
+.settings {
+    margin-bottom: 35px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.settings h2 {
+    color: var(--primary-dark);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8F5E9;
+    font-size: 1.4rem;
+}
+
+.setting-item {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.setting-item label {
+    font-weight: 500;
+    color: #333;
+}
+
+.setting-item input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* 按钮样式 */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+.btn:disabled {
+    background-color: var(--primary-light);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 计时器样式 */
+.timer {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: rgba(232, 245, 233, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.timer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(76,175,80,0.1) 0%, rgba(76,175,80,0) 70%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.status {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 护眼建议样式 */
+.tips {
+    background-color: rgba(232, 245, 233, 0.6);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.tips::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.tips h2 {
+    color: var(--primary-dark);
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.tip-content p {
+    margin-bottom: 12px;
+    color: #333;
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.7;
+}
+
+.tip-content p:before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* 豆包建议样式 */
+.doubao-advice {
+    background-color: rgba(241, 248, 233, 0.6);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.doubao-advice::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+}
+
+.doubao-advice h2 {
+    color: var(--primary-dark);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8F5E9;
+    font-size: 1.4rem;
+}
+
+.advice-content {
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .bamboo-decoration {
+        width: 60px;
+        left: 5px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .timer-display {
+        font-size: 3.2rem;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        margin-right: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .bamboo-decoration {
+        width: 40px;
+        left: 5px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .timer-display {
+        font-size: 2.8rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        margin-right: 6px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(241, 248, 233, 0.7);
+    border-top: 1px solid #E8F5E9;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container, .timer, .tips, .doubao-advice {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.timer {
+    animation-delay: 0.1s;
+}
+
+.tips {
+    animation-delay: 0.2s;
+}
+
+.doubao-advice {
+    animation-delay: 0.3s;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 25px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 0.3s;
+    background-color: #E8F5E9;
+}
+
+.close-btn {
+    color: #558B2F;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #2E7D32;
+}
+
+.rest-tip {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #2E7D32;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* 响应式设计 */
+@media (max-width: 500px) {
+    .container {
+        border-radius: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 15px;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .timer-display {
+        font-size: 2.5rem;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+        width: 95%;
+    }
+}
+
+/* 绿色主题的额外样式 */
+.green-bg {
+    background-color: #81C784;
+}
+
+.green-text {
+    color: #2E7D32;
+}
+
+/* 休息模式样式 */
+body.rest-mode {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 鼠标悬停在空白区域时的背景样式 */
+body.hover-blank {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.hover-blank .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0px);
+}
+
+body.hover-blank .settings,
+body.hover-blank .timer,
+body.hover-blank .tips,
+body.hover-blank .doubao-advice,
+body.hover-blank footer {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.rest-mode .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0px);
+}
+
+body.rest-mode .settings,
+body.rest-mode .timer,
+body.rest-mode .tips,
+body.rest-mode .doubao-advice,
+body.rest-mode footer {
+    background-color: rgba(255, 255, 255, 0.05);
+}

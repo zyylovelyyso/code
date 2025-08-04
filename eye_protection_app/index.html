@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>护眼小助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>护眼小助手</h1>
+            <p>保护眼睛，远离视疲劳</p>
+        </header>
+
+        <main>
+            <section class="settings">
+                <h2>设置</h2>
+                <div class="setting-item">
+                    <label for="interval">工作时间 (分钟):</label>
+                    <input type="number" id="interval" min="1" max="120" value="20">
+                </div>
+                <div class="setting-item">
+                    <label for="rest">休息时间 (秒):</label>
+                    <input type="number" id="rest" min="10" max="300" value="30">
+                </div>
+                <button id="start-btn" class="btn">开始</button>
+                <button id="pause-btn" class="btn" disabled>暂停</button>
+                <button id="reset-btn" class="btn" disabled>重置</button>
+            </section>
+
+            <section class="timer">
+                <div class="timer-display">
+                    <span id="minutes">20</span>:<span id="seconds">00</span>
+                </div>
+                <div class="status" id="status">准备开始</div>
+            </section>
+
+            <section class="tips" id="tips">
+                <h2>护眼建议</h2>
+                <div class="tip-content">
+                    <p>1. 每隔20分钟，远眺20秒，看20英尺（约6米）外的物体。</p>
+                    <p>2. 保持正确的坐姿，屏幕与眼睛保持一臂距离。</p>
+                    <p>3. 调整屏幕亮度，使其与环境光线相匹配。</p>
+                    <p>4. 眨眼频率保持在每分钟15-20次，防止眼睛干涩。</p>
+                </div>
+            </section>
+
+            <section class="doubao-advice" id="doubao-advice">
+                <h2><i class="fas fa-lightbulb"></i> 豆包护眼建议</h2>
+                <div class="advice-content">
+                    <p>点击按钮获取豆包提供的个性化护眼建议</p>
+                </div>
+                <button id="get-advice-btn" class="btn">获取建议</button>
+                <div class="loading" id="loading"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 护眼小助手 - 关爱您的视力健康</p>
+        </footer>
+    </div>
+
+    <!-- 休息提醒模态框 -->
+    <div id="rest-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>该休息了！</h2>
+            <div class="rest-tip">
+                <p id="rest-tip-text">请远眺20秒，放松您的眼睛。</p>
+            </div>
+            <button id="continue-btn" class="btn">继续工作</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# 详细网站背景设置指南
+
+## 一、准备工作
+1. 确保您的图片文件已经保存在本地计算机上
+2. 推荐图片格式：JPG、PNG 或 WebP
+3. 建议图片分辨率：1920×1080 或更高，以确保在各种屏幕尺寸下都能清晰显示
+
+## 二、添加图片到项目中
+1. 打开文件资源管理器，导航到您的项目文件夹 `\code\eye_protection_app`
+2. 双击进入 `images` 文件夹（如果没有此文件夹，请先创建）
+3. 将您的图片文件复制或移动到 `images` 文件夹中
+4. 建议将图片文件重命名为 `background.jpg`（如果使用其他名称，请记住在后续步骤中相应修改）
+
+## 三、修改 CSS 文件
+1. 在项目文件夹中找到 `styles.css` 文件并打开它
+2. 找到以下代码块：
+   ```css
+   body {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       background-color: var(--background-color);
+       background-image: url('images/background.jpg');
+       background-size: cover;
+       background-position: center;
+       background-attachment: fixed;
+       color: var(--text-color);
+       line-height: 1.6;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       padding: 20px;
+   }
+   ```
+3. 如果您的图片文件名不是 `background.jpg`，请修改 `url('images/background.jpg')` 中的文件名
+4. 保存并关闭 `styles.css` 文件
+
+## 四、启动应用查看效果
+1. 回到项目文件夹 `\code\eye_protection_app`
+2. 双击运行 `start_app.bat` 文件
+3. 系统会自动打开默认浏览器并加载应用
+4. 您应该能看到设置的背景图片效果
+
+## 五、调整背景效果（可选）
+如果您对背景效果不满意，可以进一步修改 `styles.css` 文件中的以下属性：
+- `background-size: cover;`：保持图片比例并覆盖整个屏幕
+- `background-position: center;`：将图片居中显示
+- `background-attachment: fixed;`：固定背景图片，不随页面滚动
+- `background-repeat: no-repeat;`：不重复显示图片
+
+## 六、常见问题排查
+1. **问题**：背景图片不显示
+   **解决方法**：
+   - 检查图片路径是否正确
+   - 确保图片文件确实存在于 `images` 文件夹中
+   - 检查图片文件名的大小写是否与 CSS 中的引用一致
+
+2. **问题**：背景图片显示变形
+   **解决方法**：
+   - 尝试使用不同的 `background-size` 值，如 `contain` 或具体的像素值
+
+3. **问题**：浏览器无法打开应用
+   **解决方法**：
+   - 手动打开浏览器，然后在地址栏中输入 `file:///D:/code/eye_protection_app/index.html`
+
+如有其他问题，请随时联系技术支持。
